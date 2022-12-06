@@ -3,7 +3,8 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 
 
-
+const productRoutes = require("./Routes/Products");
+app.use("/api/products", productRoutes);
 
 
 app.get("/" , (req,res) => {
