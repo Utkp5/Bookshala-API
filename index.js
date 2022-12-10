@@ -3,6 +3,9 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 
 
+const dotenv = require('dotenv');
+dotenv.config();
+
 const productRoutes = require("./Routes/Products");
 app.use("/api/products", productRoutes);
 const dbconnect = require("./Service/Dbconfig");
